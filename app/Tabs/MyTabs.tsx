@@ -14,7 +14,7 @@ const TabIcon = ({ icon }) => (
   </View>
 );
 
-const App = () => {
+const MyTabs = () => {
   return (
     <Tab.Navigator
       screenOptions={({ route }) => ({
@@ -111,4 +111,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+export default MyTabs;

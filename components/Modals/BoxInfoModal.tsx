@@ -7,8 +7,15 @@ import {
   TouchableOpacity,
   Modal,
 } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 const BoxInfoModal = ({ visible, onClose, area }) => {
+  const navigation = useNavigation();
+  const handleBookNow = () => {
+    navigation.navigate("Payment");
+    // redirect mate atluj karvanu!!
+    // return <Payment />;
+  };
   return (
     <Modal
       animationType="slide"
@@ -38,14 +45,14 @@ const BoxInfoModal = ({ visible, onClose, area }) => {
             </View>
             <View style={styles.detailText}>
               <Text style={styles.boldText}>Address:</Text>
-              <Text>Neque porro quisquam est qui dolorem ipsum quia dolor</Text>
+              <Text>{area.address}</Text>
             </View>
             <View style={styles.detailText}>
               <Text style={styles.boldText}>Price:</Text>
               <Text>1000 per Hour</Text>
             </View>
           </View>
-          <TouchableOpacity style={styles.bookButton} onPress={onClose}>
+          <TouchableOpacity style={styles.bookButton} onPress={handleBookNow}>
             <Text style={styles.bookButtonText}>Book Now</Text>
           </TouchableOpacity>
         </View>

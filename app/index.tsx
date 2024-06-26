@@ -1,13 +1,13 @@
-import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import MyTabs from './Tabs/MyTabs';
+import React from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import RootLayout from "./_layout";
 
 export default function App() {
   return (
     <NavigationContainer independent={true}>
-      <MyTabs />
+      <RootLayout />
     </NavigationContainer>
+    //run kar clean kari ne
+    // aa
   );
 }
-
-
